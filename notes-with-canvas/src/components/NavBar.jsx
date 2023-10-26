@@ -8,7 +8,7 @@ import {
 } from "react-router-dom"
 import Taskboard from "./Taskboard.jsx";
 import Home from "./Home.jsx";
-import Calendar from "./Calendar.jsx";
+import NWCCalendar from "./NWCCalendar.jsx";
 import Notes from "./Notes.jsx";
 import ImportedCourses from "./ImportedCourses.jsx";
 
@@ -23,13 +23,13 @@ function NavBar() {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ml-auto">
-              <Nav.Link as={Link} to="/taskboard">Taskboard</Nav.Link> {/* edit href links after */}
+              <Nav.Link as={Link} to="/taskboard">Taskboard</Nav.Link> 
               <Nav.Link as={Link} to="/calendar">Calendar</Nav.Link>
               <Nav.Link as={Link} to="/notes">Notes</Nav.Link>
               <Nav.Link as={Link} to="/importedcourses">Imported Courses</Nav.Link>
             </Nav>
             <Nav className='ms-auto'>
-            <NavDropdown title="Settings" id="basic-nav-dropdown" align="end"> {/* align will prevent sidebar from rendering off screen */}
+            <NavDropdown title="Settings" id="basic-nav-dropdown" align="end"> {/* finish settings later */}
                 <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.2">
                   Another action
@@ -48,8 +48,8 @@ function NavBar() {
     <div>
       <Routes>
         <Route path="/taskboard" element={<Taskboard/>}/>
-        <Route path="/home" element={<Home/>}/>
-        <Route path="/calendar" element={<Calendar/>}/>
+        <Route path="/home" element={<Home name="Notes with canvas project"/>}/>
+        <Route path="/calendar" element={<NWCCalendar/>}/>
         <Route path="/notes" element={<Notes/>}/>
         <Route path="/importedcourses" element={<ImportedCourses/>}/>
       </Routes>
