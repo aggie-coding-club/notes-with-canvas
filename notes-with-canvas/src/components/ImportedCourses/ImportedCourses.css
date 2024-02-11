@@ -1,0 +1,49 @@
+.contain{
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(238, 236, 233);
+    width: 99%;
+    border-radius: 0.5rem;
+    margin: 0.5%
+}
+
+.IC-title {
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    font-size: 2rem;
+    padding: 1rem;
+}
+
+.IC-paragraph {
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    padding: 1rem
+}
+
+#file-upload {
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 1rem;
+    display:flex;
+}
+
+#submit {
+    align-items: center;
+    justify-content: center;
+    width: 6rem;
+    padding: 1rem;
+    display:flex;
+}
+
+.form-container {
+    display:flex;
+    justify-content: left;
+    align-items: center;
+    background-color: rgb(238, 236, 233);
+    width: 99%;
+    border-radius: 0.5rem;
+    margin: 0.5%
+}
