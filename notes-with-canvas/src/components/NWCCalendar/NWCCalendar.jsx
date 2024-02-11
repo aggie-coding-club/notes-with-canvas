@@ -9,6 +9,7 @@ const localizer = momentLocalizer(moment);
 const MyCalendar = withDragAndDrop(Calendar);
 
 class NWCCalendar extends Component {
+  //temp events
   state = {
     events: [
       {
