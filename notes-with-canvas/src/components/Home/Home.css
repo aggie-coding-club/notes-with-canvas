@@ -1,0 +1,54 @@
+.title-container {
+    height: 31rem; 
+    width: 100%; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+}
+
+.centered-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.empty-space {
+    height: 10rem;
+}
+
+#info-heading
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    height:5rem;
+    width: 30rem;
+    color: white;
+    font-weight: bold;
+    background: linear-gradient(90deg, #2072f5, #da61ff);
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+.title {
+    font-size: 80px;
+    font-weight: bold;
+}
+
+.about-card {
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-align: center;
+    min-width: 15rem;
+    width:30rem;
+    margin: 1rem;
+}
+
+.about-card-content {
+    font-size: 1rem;
+    font-weight: lighter;
+    text-align: left;
+    margin: 1rem;
+}
+

@@ -1,0 +1,65 @@
+.smaller-title {
+    height: 3rem; 
+    width: 100%; 
+    display: flex; 
+    justify-content: left; 
+    align-items: left; 
+    margin: 1%;
+}
+
+.centered-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.empty-space {
+    height: 10rem;
+}
+
+.taskboard-heading {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.list-heading {
+    font-weight: bold;
+}
+
+.ul-list {
+    align-items: left;
+    justify-content: left;
+    font-weight: normal;
+    font-size: 1rem;
+}
+
+.taskboard {
+    background-color: rgb(238, 236, 233);
+    width: 99%;
+    min-height: 44rem;
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    margin: 0.5%;
+    border-radius: 1rem;
+}
+
+.list-card {
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-align: center;
+    min-width: 5rem;
+    width: 20rem;
+    margin: 1rem;
+}
+
+.list-content {
+    font-size: 1rem;
+    font-weight: lighter;
+    text-align: left;
+    margin: 1rem;
+}
+
+.add-task {
+    background-color: rgb(247, 247, 247);
+}
