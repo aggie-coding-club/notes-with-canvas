@@ -1,5 +1,5 @@
 import "./ImportedCourses.css";
-
+import FormSubmit from "./form";
 export default function ImportedCourses() { 
     return(
         <>
@@ -17,12 +17,7 @@ export default function ImportedCourses() {
                 <h1 className="IC-title">Uploaded Courses</h1>
                 <p className="IC-paragraph">Your previously uploaded courses will appear here.</p>
             </div>
-            <div className="form-container">
-                <form>
-                    <input id ="file-upload" type="file" name="filename"/>
-                    <input id ="submit" type="submit"/>
-                </form>
-            </div>
+            <FormSubmit/>
         </>
     );
 }
