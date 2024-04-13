@@ -11,6 +11,7 @@ import Home from "../Home/Home.jsx";
 import NWCCalendar from "../NWCCalendar/NWCCalendar.jsx";
 import Notes from "../Notes/Notes.jsx";
 import ImportedCourses from "../ImportedCourses/ImportedCourses.jsx";
+import Settings from "../Settings/Settings.jsx"
 
 function NavBar() {
   return (
@@ -30,7 +31,7 @@ function NavBar() {
             </Nav>
             <Nav className='ms-auto'>
             <NavDropdown title="Settings" id="basic-nav-dropdown" align="end"> 
-                <NavDropdown.Item href="#action/3.1">Settings Menu</NavDropdown.Item>
+                <NavDropdown.Item as={Link} to="/settings">Settings Menu</NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.2">Give Feedback</NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.3">Log Out</NavDropdown.Item>
               </NavDropdown>
@@ -46,6 +47,7 @@ function NavBar() {
         <Route path="/calendar" element={<NWCCalendar/>}/>
         <Route path="/notes" element={<Notes/>}/>
         <Route path="/importedcourses" element={<ImportedCourses/>}/>
+        <Route path="/settings" element={<Settings text="testing"/>}/>
       </Routes>
     </div>
   </div>

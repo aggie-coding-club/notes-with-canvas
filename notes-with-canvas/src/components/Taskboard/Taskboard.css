@@ -1,6 +1,6 @@
 .smaller-title {
     height: 3rem; 
-    width: 100%; 
+    width: 90%; 
     display: flex; 
     justify-content: left; 
     align-items: left; 
@@ -62,4 +62,8 @@
 
 .add-task {
     background-color: rgb(247, 247, 247);
+}
+
+.add-list {
+    align-items: right;
 }

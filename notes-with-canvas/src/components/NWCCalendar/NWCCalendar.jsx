@@ -15,37 +15,37 @@ class NWCCalendar extends Component {
       {
         start: moment().toDate(),
         end: moment().add(2, "hours"),
-        title: "Physics Lab",
+        title: "Example event",
       },
       {
         start: moment().add(1, "days"),
         end: moment().add(1, "days"),
-        title: "Write History Essay",
+        title: "Example event",
       },
       {
         start: moment().add(3, "days"),
         end: moment().add(3, "days"),
-        title: "Finalize Essay",
+        title: "Example event",
       },
       {
         start: moment().subtract(10, "days"),
         end: moment().subtract(10, "days"),
-        title: "Register for classes",
+        title: "Example event",
       },
       {
         start: moment().subtract(19, "days"),
         end: moment().subtract(19, "days"),
-        title: "Calc hw",
+        title: "Example event",
       },
       {
         start: moment().subtract(13, "days"),
         end: moment().subtract(13, "days"),
-        title: "Chemistry lab",
+        title: "Example event",
       },
       {
         start: moment().subtract(13, "days"),
         end: moment().subtract(13, "days"),
-        title: "Do some programming",
+        title: "Example event",
       },
     ],
   };
