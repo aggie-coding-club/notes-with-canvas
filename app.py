@@ -1,9 +1,41 @@
-from flask import Flask, request
+from flask import Flask, request, make_response
 from flask_cors import CORS
 import zipfile
 import os
+import json
+import firebase_admin
+from firebase_admin import credentials
+from firebase_admin import firestore
+#place json file in same directory as this file
+cred = credentials.Certificate("./NAME_OF_JSONFILE.json")
+app = firebase_admin.initialize_app(cred)
+db = firestore.client()
+
 app = Flask(__name__)
 CORS(app)  # Enable CORS for all routes. This allows The React App to communicate with Flask App
+
+###FIRESTORE TEST###
+snapshot = db.collection("Users")
+print(snapshot)
+def getUser(userId):
+    if userId == "null":
+        return None
+    return snapshot.document(userId).get().to_dict()
+print(getUser("Classes"))
+################
+
+def findFilePath(fileName, directory):
+    for root, dirs, files in os.walk(directory):
+        if(fileName in files):
+            return os.path.join(root, fileName)
+
+def readCourseData(filePath):
+    with open(filePath, 'r') as courseData:
+        courseContent = courseData.read()
+        print(courseContent[0:21])
+        return courseContent[21:] #Only return the data, not variable declaration
+        
+
 @app.route('/')
 def hello():
     return '<h1>Hello, World</h1>!'
@@ -34,7 +66,11 @@ def submit_form():
                 for file_info in zip_ref.infolist():
                     if("course-data.js" in file_info.filename):
                         zip_ref.extract(file_info, unzip_path)
-                        return "File submitted successfully"
+                        courseFilePath = findFilePath("course-data.js","./unzipped_Courses")
+                        courseJson = json.dumps(readCourseData(courseFilePath))
+                        response = make_response(courseJson)
+                        response.headers['Content-Type'] = 'application/json'
+                        return response
                 else:
                     return "Could not find file"
             
